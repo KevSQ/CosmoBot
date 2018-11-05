@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUI Project</title>
+	<link href="../style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+	<script src="../js/moment.js"> </script>
+</head>
+<body>
+	<script>
+		var displayTime = (function () {
+			document.getElementById("time").innerHTML = moment().format('h:mm:ss a').toUpperCase();
+		});
+		setInterval(displayTime, 1000);
+	</script>
+	<script src="../js/script.js"> </script>
+	<div id="main-page">
+		<div id="sidenav">
+			<div class="holder">
+				<a href="tasks.html"> TASKS </a><br>
+				<a href="add.html"> ADD TASKS </a><br>
+				<a href="profiles.html"> PROFILES </a><br>
+				<a href="proxy.html"> PROXIES </a><br>
+				<a href="main.html"> SETTINGS </a> <br>
+			</div>
+		</div>
+		<h1 class="cosmo"> _COSMO </h1>
+		<p id="time"> </p>
+	</div>
+
+	<div id="main-content">
+		<div id="main-header">
+			<p> <span style="margin-left: 45%"> TASKS</span> </p>
+		</div>
+		<div class="tasks-container">
+			<div class="firstSection">
+				<p class="tasks-titles">Username</p> <input class="input-fields" placeholder="EMAIL" id="login-email"><br>
+				<p class="tasks-titles">Password</p> <input class="input-fields" placeholder="PASSWORD" id="login-pass">
+				<button class="buttons" id="login">Account Login</button>
+			</div>
+			<div class="secondSection">
+				<p class="tasks-titles">Store</p>
+				<div class="select-containers">
+					<select class="input-fields" id="store">
+						<option disabled selected> Default Vaue </option>
+					</select>
+				</div> <br>
+				<p class="tasks-titles">Monitor Mode</p>
+				<div class="select-containers">
+					<select class="input-fields" id="monitor">
+						<option disabled selected> Default Vaue </option>
+					</select>
+				</div> <br>
+				<p class="tasks-titles"> Checkout Mode</p>
+				<div class="select-containers">
+					<select class="input-fields" id="checkout">
+						<option disabled selected> Default Vaue </option>
+					</select>
+				</div>
+			</div>
+			<div class="thirdSection">
+				<p class="tasks-titles">Monitor Input </p>
+				<input class="input-fields" placeholder="URL/Keyword/Variant" id="monitor-input"><br>
+				<p class="tasks-titles">Checkout Proxy </p>
+				<input class="input-fields" placeholder="URL/Keyword/Variant" id="checkout-proxy">
+			</div>
+
+			<div class="fourthSection">
+				<p class="tasks-titles"> Size</p>
+				<div class="select-containers">
+					<select class="input-fields" id="size">
+						<option disabled selected> M</option>
+					</select>
+				</div> <button class="buttons" id="login" style="width: 150px">Schedule Tasks</button>
+				<br>
+				<p class="tasks-titles">Quantity</p>
+				<div class="select-containers">
+					<select class="input-fields" id="quantity">
+						<option disabled selected> Default Value</option>
+					</select>
+				</div> <button class="buttons" id="login" style="width: 150px">New Product</button>
+				 <br>
+				<p class="tasks-titles">Profile</p>
+				<div class="select-containers">
+					<select class="input-fields" id="loadedProfile">
+						<option disabled selected> Default Vaue </option>
+					</select>
+				</div> <button class="buttons" id="login" style="width: 150px; color: green">Captcha</button><br>
+				<p class="tasks-titles"> Tasks</p>
+				<div class="select-containers">
+					<select class="input-fields" id="add-tasks">
+						<option disabled selected> 1</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	</html>

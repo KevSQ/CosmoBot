@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUI Project</title>
+	<link href="../style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+	<script src="../js/moment.js"> </script>
+</head>
+<body>
+	<script>
+		var displayTime = (function () {
+			document.getElementById("time").innerHTML = moment().format('h:mm:ss a').toUpperCase();
+		});
+		setInterval(displayTime, 1000);
+	</script>
+	<script src="../js/script.js"> </script>
+	<div id="main-page">
+		<div id="sidenav">
+			<div class="holder">
+				<a href="tasks.html"> TASKS </a><br>
+				<a href="add.html"> ADD TASKS </a><br>
+				<a href="profiles.html"> PROFILES </a><br>
+				<a href="proxy.html"> PROXIES </a><br>
+				<a href="main.html"> SETTINGS </a> <br>
+			</div>
+		</div>
+		<h1 class="cosmo"> _COSMO </h1>
+		<p id="time"> </p>
+	</div>
+	<div id="main-content">
+
+		<div id="main-header">
+			<p> <span class="tasks-ID">ID</span>
+				<span class="tasks-STORE">STORE</span>
+				<span class="tasks-ITEM">ITEM</span>
+				<span class="tasks-PROFILE">PROFILE</span>
+				<span class="tasks-PROXY">PROXY</span>
+				<span class="tasks-STATUS">STATUS</span>
+			</p>
+		</div>
+
+		<div class="instances">
+			<p> <span class="tasks-ID" id="IDOne">1</span>
+				<span class="tasks-STORE" id="StoreOne">STORE</span>
+				<span class="tasks-ITEM" id="ItemOne">ITEM</span>
+				<span class="tasks-PROFILE" id="ProfileOne">PROFILE</span>
+				<span class="tasks-PROXY" id="ProxyOne">PROXY</span>
+				<span class="tasks-STATUS" id="StatusOne">STATUS</span>
+			</p>
+		</div>
+		<br>
+		<div class="instances">
+			<p> <span class="tasks-ID" id="IDOne">1</span>
+				<span class="tasks-STORE" id="StoreOne">STORE</span>
+				<span class="tasks-ITEM" id="ItemOne">ITEM</span>
+				<span class="tasks-PROFILE" id="ProfileOne">PROFILE</span>
+				<span class="tasks-PROXY" id="ProxyOne">PROXY</span>
+				<span class="tasks-STATUS" id="StatusOne">STATUS</span>
+			</p>
+		</div>
+		<br>
+		<div class="instances">
+			<p> <span class="tasks-ID" id="IDOne">1</span>
+				<span class="tasks-STORE" id="StoreOne">STORE</span>
+				<span class="tasks-ITEM" id="ItemOne">ITEM</span>
+				<span class="tasks-PROFILE" id="ProfileOne">PROFILE</span>
+				<span class="tasks-PROXY" id="ProxyOne">PROXY</span>
+				<span class="tasks-STATUS" id="StatusOne">STATUS</span>
+			</p>
+		</div>
+		<br>
+		<div class="instances">
+			<p> <span class="tasks-ID" id="IDOne">1</span>
+				<span class="tasks-STORE" id="StoreOne">STORE</span>
+				<span class="tasks-ITEM" id="ItemOne">ITEM</span>
+				<span class="tasks-PROFILE" id="ProfileOne">PROFILE</span>
+				<span class="tasks-PROXY" id="ProxyOne">PROXY</span>
+				<span class="tasks-STATUS" id="StatusOne">STATUS</span>
+			</p>
+		</div>
+		<div id="profile-nav-buttons"> 
+			<button id="start-all" class="buttons"> Start All </button>
+			<button id="stop-all" class="buttons"> Stop All </button>
+			<button id="delete-all" class="buttons"> Delete All </button>
+			<button id="new-link" class="buttons"> New Link </button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WIP Bot GUI </title>
+	<link href="../style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+	<script src="../js/moment.js"> </script>
+</head>
+<body>
+	<script>
+		var displayTime = (function () {
+			document.getElementById("time").innerHTML = moment().format('h:mm:ss a').toUpperCase();
+		});
+		setInterval(displayTime, 1000);
+	</script>
+	<script src="../js/script.js"> </script>
+	<div id="main-page">
+		<div id="sidenav">
+			<div class="holder">
+				<a href="tasks.html"> TASKS </a><br>
+				<a href="add.html"> ADD TASKS </a><br>
+				<a href="profiles.html"> PROFILES </a><br>
+				<a href="proxy.html"> PROXIES </a><br>
+				<a href="main.html"> SETTINGS </a> <br>
+			</div>
+		</div>
+		<h1 class="cosmo"> _COSMO </h1>
+		<p id="time"> </p>
+	</div>
+		<div id="main-content">
+
+			<div id="main-header">
+				<p> <span id="main-DELAY"> DELAY </span> <span id="main-HELP"> HELP </span> </p>
+
+				<div id="delay-block"> 
+					<p> <span id="main-number">2000</span><button id="main-decrease"> - </button> <button id="main-increase"> + </button> </p> 
+				</div>
+
+				<div id="main-help-block"> 
+					<div align="left" style="font-size: 35px;"> NEED HELP? </div> <br>
+					<div align="left"> USE OUR DISCORD SERVER<br> TO ASK<br> ANY QUESTIONS<br> YOU MIGHT HAVE! <br>(I need the discord 
+						<br>server invite to add kthxbye)</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>

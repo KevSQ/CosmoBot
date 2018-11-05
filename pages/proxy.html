@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUI Project</title>
+	<link href="../style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+	<script src="../js/moment.js"> </script>
+</head>
+<body>
+	<script>
+		var displayTime = (function () {
+			document.getElementById("time").innerHTML = moment().format('h:mm:ss a').toUpperCase();
+		});
+		setInterval(displayTime, 1000);
+	</script>
+	<script src="../js/script.js"> </script>
+	<div id="main-page">
+		<div id="sidenav">
+			<div class="holder">
+				<a href="tasks.html"> TASKS </a><br>
+				<a href="add.html"> ADD TASKS </a><br>
+				<a href="profiles.html"> PROFILES </a><br>
+				<a href="proxy.html"> PROXIES </a><br>
+				<a href="main.html"> SETTINGS </a> <br>
+			</div>
+		</div>
+		<h1 class="cosmo"> _COSMO </h1>
+		<p id="time"> </p>
+
+		<div id="main-content">
+			<div id="main-header">
+				<p> <span id="proxy-list">PROXY LIST</span>
+					<span id="proxy-tester">PROXY TESTER </span>
+				</p>
+			</div>
+			<div class="proxy-container">
+				<div class="proxy-list-items" contenteditable="true" style="outline: none !important;">
+					<p> <span class="list-items">0000.0000.0000.0000</span>
+						<span class="list-items">111.111.111.11</span>
+						<span class="list-items">12.31.123.1231 </span>
+						<span class="list-items"> a</span>
+						<span class="list-items">a </span>
+						<span class="list-items">a </span>
+						<span class="list-items">a </span>
+					</p>
+				</div>
+
+				<div class="proxy-tester-items"> 
+					<p class="proxy-address-list" contenteditable="true" style="outline: none !important;"> <span class="tester-items"><span id="proxy-address"> 12.31.123.1231 </span> </span><br>
+						<span class="tester-items"><span id="proxy-address"> 89.6.28.213 </span> </span><br>
+						<span class="tester-items"><span id="proxy-address"> BlANK </span> </span><br>
+						<span class="tester-items"><span id="proxy-address"> BlANK </span> </span><br>
+						<span class="tester-items"><span id="proxy-address"> BlANK </span> </span><br>
+						<span class="tester-items"><span id="proxy-address"> BlANK </span> </span>
+					</p>
+					<p class="proxy-speed-list"> 
+						<span id="proxy-speed"> FAST! </span><br>
+						<span id="proxy-speed"> FAST! </span><br>
+						<span id="proxy-speed"> FAST! </span><br>
+						<span id="proxy-speed"> FAST! </span><br>
+						<span id="proxy-speed"> FAST! </span><br>
+						<span id="proxy-speed"> FAST! </span><br>
+					</p>
+				</div> 
+			</div>
+
+			<div id="proxy-nav-buttons">
+				<button class="buttons" id="proxy-paste-list"> Paste </button>
+				<button class="buttons" id="proxy-test"> Test All </button>
+				<button class="buttons" id="proxy-paste-tester"> Paste </button>
+				<button class="buttons" id="proxy-delete"> Delete All </button>
+			</div>
+		</div>
+	</body>
+	</html>

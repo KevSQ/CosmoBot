@@ -1,0 +1,668 @@
+
+:root {
+	--bg-color: #171717;
+	--primary-color: #7442f4;
+	--button-color: #0F0F0F;
+	--UI-width: 97.5%;
+}
+body {
+	margin: 0px;
+	background-color: var(--bg-color);
+	overflow: auto;
+}
+
+button:focus {
+	outline: 0;
+}
+button:hover {
+	cursor: pointer;
+}
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+[contenteditable]:focus {
+}
+#title-container {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	animation: fadein 2s;
+}
+@keyframes moveInto {
+	from { margin-top: 300px; }
+	to   { margin-top: 200px; } 
+}
+#title-container > #title {
+	margin-top: 200px;
+	animation: moveInto 2s;
+	color: var(--primary-color);
+	font-weight: lighter;
+	font-size: 100px;
+	font-family: 'Libre Barcode 39 Extended Text', cursive;
+}
+#title-box {
+	display: block;
+	background-color: var(--bg-color);
+	font-size: 16px;
+	animation-fill-mode: forwards !important;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	animation: beforeColor 1s;
+}
+@keyframes beforeColor {
+	from { background-color: #232323; }
+	to { background-color: var(--bg-color); }
+}
+
+#title-box:hover {
+	animation: changeColor 1s;
+}
+@keyframes changeColor {
+	from { background-color: var(--bg-color); }
+	to   { background-color: #232323; }
+}
+#link {
+	display: block;
+	font-family: 'Fira Mono', monospace;
+	letter-spacing: 2px;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: var(--primary-color);
+}
+
+#main-content {
+	margin-left: 180px;
+	white-space: nowrap;
+	width: 1250px;
+}
+@keyframes logoFadeIn {
+	from { 
+	       opacity: 0; }
+	to { 
+	     opacity: 1; }
+}
+.cosmo {
+	color: var(--primary-color);
+	font-family: 'Libre Barcode 39 Extended Text', cursive;
+	font-weight: 100;
+	margin-left: 600px;
+	font-size: 4em;
+	opacity: 0;
+	animation: 1s logoFadeIn 1s;
+	animation-fill-mode: forwards !important;
+}
+#sidenav {
+	background-color: var(--primary-color); 
+	position: fixed;
+	text-align: center;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	height: 120%;
+	width: 180px;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.4);
+	overflow: hidden;
+}
+#sidenav .holder {
+	margin-top: 20px;
+}
+.holder a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	margin-top: 15px;
+	font-size: 1.15em;
+	font-family: 'Fira Mono', monospace;
+	letter-spacing: 2px;
+	animation-fill-mode: forwards !important;
+	font-weight: lighter;
+}
+@keyframes timeFadeIn {
+	from { 
+	       opacity: 0; }
+	to { 
+	     opacity: 1; }
+}
+#time {
+	color: white;
+	display: inline-block;
+	white-space: nowrap;
+	font-family: monospace;
+	position: absolute;
+	opacity: 0;
+	top: 50px;
+	left: 1250px;
+	animation-fill-mode: forwards !important;
+	animation: 2s timeFadeIn 1s;
+}
+/*main.html*/
+
+#main-header > p {
+	text-align: center;
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	font-size: .97em;
+	margin-left: 6%;
+	margin-right: 2.9%;
+	padding-top: .7%;
+	padding-bottom: 2.2%;
+	box-shadow: 0px 1px 23px 3px rgba(116,66,244,0.3);
+	color: white;
+}
+
+#main-header > p #main-DELAY {
+	margin-left: 15%;
+	float: left;
+}
+
+#main-header > p #main-HELP {
+	margin-right: 15%;
+	float: right;
+}
+#main-header {
+	width: var(--UI-width);
+}
+
+#delay-block {
+	margin-top: 1%;
+	margin-left: 6%;
+	display: inline-block;
+	background-color: var(--button-color);
+	text-align: center;
+	width: 20%;
+	padding-bottom: 2%;
+	float: left;
+	font-family: 'Fire Mono', monospace;
+	color: white;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+}
+#delay-block button {
+	outline: none;
+	background-color: transparent;
+	border: none;
+	float: right;
+	margin-right: 10%;
+	font-family: 'Fire Mono', monospace;
+	color: white;
+	animation: beforeColor .3s;
+}
+
+#delay-block button:hover {
+	animation: changeColor .3s;
+	animation-fill-mode: forwards !important;
+}
+#main-number {
+	float: left;
+	margin-left: 10%;
+}
+#main-help-block {
+	display:inline-block;
+	margin-top: 1%;
+	margin-right: 2.9%;
+	font-family: 'Fira Mono', monospace;
+	background-color: var(--button-color);
+	padding: 20px;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	float: right;
+}
+
+#main-header > p span {
+	float: left;
+}
+
+/*profiles.html*/
+
+.instances > p span {
+	margin-top: 10px;
+	float: left;
+}
+
+.instances {
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	margin-left: 6%;
+	margin-right: 5.4%;
+	width: calc((var(--UI-width)) - 111px);
+	height: 35px;
+	font-size: .7em;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	font-style: italic;
+}
+.tasks-ID {
+	margin-left: 20px;
+	width: 20px;
+}
+.tasks-STORE {
+	margin-left: 40px;
+	width: 20px;
+}
+.tasks-ITEM {
+	margin-left: 50px;
+	width: 20px;
+}
+.tasks-PROFILE {
+	margin-left: 200px;
+	width: 20px;
+}
+.tasks-PROXY {
+	margin-left: 100px;
+	width: 20px;
+}
+.tasks-STATUS {
+	margin-left: 300px;
+	width: 20px;
+}
+
+.buttons {
+	display: inline-block;
+	font-family: 'Fira Mono', monospace;
+	letter-spacing: 2px;
+	width: 120px;
+	height: 30px;
+	text-decoration: none;
+	animation-fill-mode: forwards !important;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	border: none;
+	background-color: var(--button-color);
+	color: var(--primary-color);
+	animation: beforeColor 1s;
+}
+.buttons:hover {
+	animation: changeColor 1s;
+}
+#start-all, #delete-all, #stop-all, #new-link {
+	margin-top: 50px;
+}
+#start-all {
+	margin-left: 150px;
+}
+
+#stop-all {
+	margin-left: 150px;
+}
+
+#delete-all {
+	margin-left: 150px;
+}
+#new-link {
+	margin-left: 150px;
+}
+
+/*proxy.html */
+
+#proxy-list {
+	margin-left: 19%;
+
+}
+#proxy-tester {
+	margin-right: 19%;
+	float: right !important;
+}
+
+.proxy-list-items {
+	width: 500px;
+	text-align: center;
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	font-size: .9em;
+	height: 500px;
+	margin-left: 6%;
+	margin-right: 2.9%;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	float: left !important;
+}
+.proxy-tester-items {
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	font-size: .9em;
+	width: 500px;
+	height: 500px;
+	margin-left: 6%;
+	margin-right: 2.9%;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	float: right !important;
+}
+.list-items, .tester-items {
+	width: 500px;
+	display: block;
+}
+.proxy-speed {
+	display:inline;
+}
+.proxy-container {
+	display:block;
+	width: var(--UI-width);
+	height: 530px;
+}
+#proxy-address {
+	display:block;
+	float: left !important;
+	width: 200px;
+	margin-left: 50px;
+}
+#proxy-speed {
+	width: 50px;
+	position: relative;
+	left: 100px;
+	color: green;
+}
+.proxy-address-list {
+	float: left;
+	display: inline-block;
+	width: 250px;
+	height: 480px;
+}
+.proxy-speed-list {
+	float: right;
+	display: inline-block;
+	width: 200px;
+	height: 480px;
+}
+#proxy-nav-buttons {
+	display: block;
+}
+
+#proxy-paste-list, #proxy-test, #proxy-paste-tester, #proxy-delete {
+	margin-top: 20px;
+}
+
+#proxy-paste-list {
+	margin-left: 150px;
+}
+#proxy-test {
+	margin-left: 150px;
+}
+#proxy-paste-tester {
+	margin-left: 150px;
+}
+#proxy-delete {
+	margin-left: 150px;
+}
+
+#profiles-PROFILE {
+	margin-left: 485px;
+}
+
+.profiles-container {
+	width: calc((var(--UI-width)) - 111px);
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	height: 600px;
+	margin-left: 6%;
+	margin-right: 2.9%;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	overflow: scroll;
+}
+
+.profiles-titles {
+	display: inline;
+	width: 215px;
+	font-weight: lighter !important;
+	font-family: 'Fira Mono', monospace;
+	border-bottom: 2px solid var(--primary-color);
+	font-size: 1.4em;
+}
+.title-container {
+	margin-top: 10px;
+	margin-left: 30px;
+}
+#billing-title {
+	margin-left: 300px;
+}
+.delivery-fill {
+	overflow: hidden;
+	width: 500px;
+	height: 230px;
+	display: inline-block;
+}
+.billing-fill {
+	margin-left: 15px;
+	overflow: hidden;
+	width: 500px;
+	height: 230px;
+	display: inline-block;
+}
+.payment-fill {
+	margin-top: 10px;
+	overflow: hidden;
+	width: 500px;
+	height: 230px;
+	display: inline-block;
+}
+.setting-fill {
+	margin-left: 15px;
+	margin-top: 10px;
+	overflow-y: auto !important;
+	width: 500px;
+	height: 230px;
+	display: inline-block;
+}
+.input-fields:focus {
+	outline: none;
+	color: white;
+}
+.input-fields {
+	font-family: 'Fira Mono', monospace;
+	margin-top: 15px;
+	margin-left: 30px;
+	padding-left: 5px;
+	height: 30px;
+	font-size: 10px;
+	color: white;
+	background-color: #070707;
+	border: none;
+	overflow-x: scroll !important;
+	border-bottom: 2px solid var(--primary-color);
+}
+.select-containers {
+	text-align: center;
+	font-family: 'Fira Mono', monospace;
+	display: inline;
+}
+#country-list, #state-list {
+	width: 100px;
+}
+.select-containers select {
+	font-family: 'Fira Mono', monospace;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	color: white;
+	height: 35px;
+	animation-fill-mode: forwards !important;
+	width: 200px;
+}
+
+.select-containers select:focus {
+	color: white;
+}
+
+#first-name-field {
+	width: 220px;
+}
+#last-name-field {
+	width: 220px;
+}
+#address-field {
+	width: 300px;
+}
+#apt-field {
+	width: 140px;
+}
+#country-list {
+	width: 150px;
+}
+#state-list {
+	width: 150px;
+}
+#city-field {
+	width: 465px;
+}
+#billing-city-field {
+	width: 300px;
+}
+#email-field {
+	width: 465px;
+}
+#card-owner-field {
+	width: 465px;
+}
+#card-number-field {
+	width: 465px;
+}
+#expire-field {
+	width: 233px;
+}
+#cvv-field {
+	margin-left: 20px;
+	width: 60px;
+}
+
+input:checked {
+	visibility: hidden;
+}
+@keyframes paymentAfter {
+	from {background-color: transparent;}
+	to {background-color: #181818;}
+}
+@keyframes paymentBefore {
+	from {background-color: #181818;}
+	to {background-color: transparent;}
+
+}
+#payment-once {
+	margin-left: 20px;
+	display: inline-block;
+	font-family: 'Fira Mono', monospace;
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	text-decoration: none;
+	animation-fill-mode: forwards !important;
+	border: none;
+	color: var(--primary-color);
+	background-color: transparent;
+	animation: paymentBefore 1s;
+}
+#payment-once:hover {
+	animation: paymentAfter 1s;
+}
+#profile-field {
+	width: 200px;
+}
+#profiles {
+	width: 205px;
+}
+#loadProfile {
+	color: green;
+}
+#deleteProfile {
+	margin-left: 10px;
+	color: red;
+	font-weight: bolder;
+}
+
+.tasks-container {
+	width: calc((var(--UI-width)) - 111px);
+	font-family: 'Fira Mono', monospace;
+	background: var(--button-color);
+	height: 600px;
+	margin-left: 6%;
+	margin-right: 2.9%;
+	box-shadow: 0px 7px 23px 3px rgba(0,0,0,0.7);
+	color: white;
+	overflow: scroll;
+}
+
+.tasks-titles {
+	color: white;
+	display: inline;
+	width: 150px;
+	border-bottom: 2px solid var(--primary-color);
+	font-family: 'Fira Mono', monospace;
+	font-size: 13px;
+}
+
+.firstSection {
+	display: inline-block;
+	margin-left: 10px;
+	width: 450px;
+	height: 150px;
+}
+.secondSection {
+	margin-left: 20px;
+	float: right;
+	display: inline-block;
+	margin-left: 10px;
+	width: 500px;
+	height: 150px;
+
+}
+#login {
+	margin-left: 20px;
+	display: inline-block;
+	font-family: 'Fira Mono', monospace;
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	text-decoration: none;
+	animation-fill-mode: forwards !important;
+	border: none;
+	color: var(--primary-color);
+	background-color: transparent;
+	box-shadow: none !important;
+	animation: paymentBefore 1s;
+}
+
+#login:hover {
+	animation: paymentAfter 1s;
+}
+.thirdSection {
+	margin-left: 10px;
+	height: 120px;
+	width: 100%;
+}
+.fourthSection {
+	margin-left: 10px;
+	height: 220px;
+	width: 100%;	
+}
+#monitor-input {
+	margin-left: 37px ;
+	width: 890px;
+}
+
+#checkout-proxy {
+	width: 890px;
+}
+
+#monitor {
+	margin-left: 40px;
+	width: 300px;
+}
+#store {
+	margin-left: 95px;
+	width: 300px;
+
+}
+#checkout {
+	width: 300px;
+}
+#size {
+	margin-left: 61px;
+}
+#loadedProfile {
+	margin-left: 38px;
+}
+#add-tasks {
+	margin-left: 53px;
+}
